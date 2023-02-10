@@ -2,11 +2,10 @@ const{CompanyDetails}=require('../models');
 exports.createCompanyDetails=async (data)=>
 {  
   const toBeSentDetails={    
-    'id':data.id,
+    'id':data.companyId,
     'name':data.name,
     'score':data.score
   };
-  const companyDetails=await CompanyDetails.create(data);
-
+  await CompanyDetails.create(data);
   return toBeSentDetails;
 };

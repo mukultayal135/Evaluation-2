@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   CompanyDetails.init({
     companyId: DataTypes.STRING,
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     ceo: DataTypes.STRING,
     tags: DataTypes.ARRAY(DataTypes.STRING),
     score: DataTypes.FLOAT,

@@ -6,7 +6,7 @@ exports.getCompanyDetails=async(url)=>
  
   const companyDetails=await axios.get(url.urlLink);
   const data=companyDetails.data;
-  const dataObj=utils.getData(data);  
+  const dataObj=utils.getData(data);
   dataObj.shift();
   try{
     const reqCompanyDetails=await companyData.getCompanyDetails(dataObj);
